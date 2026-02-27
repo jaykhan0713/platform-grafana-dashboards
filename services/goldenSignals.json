@@ -1,8 +1,8 @@
 {
   "__inputs": [
     {
-      "name": "DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)",
-      "label": "Amazon Managed Prometheus (ws-8b1ac0fd-c7a6-47ad-a406-76563c909f41)",
+      "name": "DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41",
+      "label": "Prometheus ws-8b1ac0fd-c7a6-47ad-a406-76563c909f41",
       "description": "",
       "type": "datasource",
       "pluginId": "prometheus",
@@ -69,7 +69,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "fieldConfig": {
         "defaults": {
@@ -149,7 +149,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(\r\n  0.50,\r\n  sum by (le, version) (\r\n    rate(http_server_requests_seconds_bucket{service_name=~\"$service_name\", env=~\"$env\"}[5m])\r\n  )\r\n)",
@@ -161,7 +161,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(\r\n  0.95,\r\n  sum by (le, version) (\r\n    rate(http_server_requests_seconds_bucket{service_name=~\"$service_name\", env=~\"$env\"}[5m])\r\n  )\r\n)",
@@ -174,7 +174,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "histogram_quantile(\r\n  0.99,\r\n  sum by (le, version) (\r\n    rate(http_server_requests_seconds_bucket{service_name=~\"$service_name\", env=~\"$env\"}[5m])\r\n  )\r\n)",
@@ -191,7 +191,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "Average per-second rate over the last 5 minutes",
       "fieldConfig": {
@@ -271,7 +271,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "rate(http_server_requests_seconds_count{service_name=~\"$service_name\", env=~\"$env\"}[5m])\r\n",
@@ -288,7 +288,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "fieldConfig": {
         "defaults": {
@@ -368,7 +368,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "100 * (\r\nsum by (version) (\r\n  rate(http_server_requests_seconds_count{service_name=~\"$service_name\",env=~\"$env\",status=~\"5..\"}[5m])\r\n)\r\n/\r\nclamp_min(\r\n  sum by (version) (\r\n    rate(http_server_requests_seconds_count{service_name=~\"$service_name\",env=~\"$env\"}[5m])\r\n  ),\r\n  1e-9\r\n)\r\n)",
@@ -384,7 +384,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "fieldConfig": {
         "defaults": {
@@ -464,7 +464,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "100 * (\r\nsum by (version) (\r\n  rate(http_server_requests_seconds_count{service_name=~\"$service_name\",env=~\"$env\",status=~\"4..\"}[5m])\r\n)\r\n/\r\nclamp_min(\r\n  sum by (version) (\r\n    rate(http_server_requests_seconds_count{service_name=~\"$service_name\",env=~\"$env\"}[5m])\r\n  ),\r\n  1e-9\r\n)\r\n)",
@@ -478,9 +478,22 @@
       "type": "timeseries"
     },
     {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 24,
+      "panels": [],
+      "title": "Resiliency",
+      "type": "row"
+    },
+    {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "fieldConfig": {
         "defaults": {
@@ -543,7 +556,118 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 17
+        "y": 18
+      },
+      "id": 23,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
+          },
+          "editorMode": "code",
+          "expr": "avg by (version) (\r\n    resilience4j_bulkhead_max_allowed_concurrent_calls{service_name=~\"$service_name\", env=~\"$env\", name=\"webBulkheadFilter\"}\r\n)",
+          "instant": false,
+          "legendFormat": "MAX_ALLOWED | {{version}}",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
+          },
+          "editorMode": "code",
+          "expr": "resilience4j_bulkhead_max_allowed_concurrent_calls{service_name=~\"$service_name\", env=~\"$env\", name=\"webBulkheadFilter\"}\r\n-\r\nresilience4j_bulkhead_available_concurrent_calls{service_name=~\"$service_name\", env=~\"$env\", name=\"webBulkheadFilter\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "USED | {{ecs_task}}-{{version}}",
+          "range": true,
+          "refId": "B"
+        }
+      ],
+      "title": "Inbound Bulkhead Permits",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 18
       },
       "id": 4,
       "options": {
@@ -562,30 +686,17 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
-          "expr": "resilience4j_bulkhead_max_allowed_concurrent_calls{service_name=~\"$service_name\", env=~\"$env\", name=\"webBulkheadFilter\"}",
+          "expr": "resilience4j_circuitbreaker_state{service_name=~\"$service_name\", env=~\"$env\"} > 0",
           "instant": false,
-          "legendFormat": "MAX_ALLOWED",
+          "legendFormat": "{{name}} : {{state}} ",
           "range": true,
           "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
-          },
-          "editorMode": "code",
-          "expr": "resilience4j_bulkhead_max_allowed_concurrent_calls{service_name=~\"$service_name\", env=~\"$env\", name=\"webBulkheadFilter\"}\r\n-\r\nresilience4j_bulkhead_available_concurrent_calls{service_name=~\"$service_name\", env=~\"$env\", name=\"webBulkheadFilter\"}\r\n",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "USED",
-          "range": true,
-          "refId": "B"
         }
       ],
-      "title": "Inbound Bulkhead Permits",
+      "title": "CircuitBreaker State",
       "type": "timeseries"
     },
     {
@@ -594,7 +705,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 26
       },
       "id": 6,
       "panels": [],
@@ -604,7 +715,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "The total number of platform threads currently alive in the JVM.",
       "fieldConfig": {
@@ -665,7 +776,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 26
+        "y": 27
       },
       "id": 5,
       "options": {
@@ -684,7 +795,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "jvm_threads_live_threads{service_name=~\"$service_name\", env=~\"$env\"}",
@@ -701,7 +812,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "Background threads. Do not keep the JVM alive. Ex GC helpers, schedulers, async internals.",
       "fieldConfig": {
@@ -787,7 +898,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 26
+        "y": 27
       },
       "id": 7,
       "options": {
@@ -806,7 +917,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "jvm_threads_daemon_threads{service_name=~\"$service_name\", env=\"$env\"}",
@@ -823,7 +934,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "The maximum number of live threads ever observed since JVM start. This value never goes down until restart.",
       "fieldConfig": {
@@ -868,7 +979,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -883,7 +995,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 35
       },
       "id": 9,
       "options": {
@@ -902,7 +1014,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "jvm_threads_peak_threads{service_name=~\"$service_name\", env=~\"$env\"}",
@@ -918,7 +1030,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "Threads by JVM state.\n\nRUNNABLE: Actively executing or ready to run.\n\nBLOCKED: Waiting for a monitor lock.\n\nWAITING: Waiting indefinitely (park, wait).\n\nTIMED_WAITING: Waiting with a timeout.\n\nNEW: Created but not started.\n\nTERMINATED: Finished execution.",
       "fieldConfig": {
@@ -963,7 +1075,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -978,7 +1091,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 34
+        "y": 35
       },
       "id": 10,
       "options": {
@@ -997,7 +1110,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1014,7 +1127,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "If this goes high while threads are low → have blocking or heavy compute.",
       "fieldConfig": {
@@ -1059,7 +1172,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1074,7 +1188,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 42
+        "y": 43
       },
       "id": 21,
       "options": {
@@ -1093,7 +1207,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "100 * process_cpu_usage{service_name=~\"$service_name\", env=~\"$env\"}\r\n",
@@ -1112,7 +1226,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 50
+        "y": 51
       },
       "id": 17,
       "panels": [],
@@ -1122,7 +1236,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "",
       "fieldConfig": {
@@ -1167,7 +1281,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1182,7 +1297,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 51
+        "y": 52
       },
       "id": 14,
       "options": {
@@ -1201,7 +1316,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "100 *\r\nsum by (ecs_task, version) (\r\n  jvm_memory_used_bytes{area=\"heap\", service_name=~\"$service_name\", env=~\"$env\"}\r\n)\r\n/\r\nsum by (ecs_task, version) (\r\n  jvm_memory_max_bytes{area=\"heap\", service_name=~\"$service_name\", env=~\"$env\"}\r\n)\r\n",
@@ -1217,7 +1332,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "",
       "fieldConfig": {
@@ -1262,7 +1377,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1277,7 +1393,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 51
+        "y": 52
       },
       "id": 13,
       "options": {
@@ -1297,7 +1413,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "sum by (ecs_task, version) (\r\n  jvm_memory_max_bytes{\r\n    service_name=~\"$service_name\",\r\n    env=~\"$env\",\r\n    area=\"heap\"\r\n  }\r\n) / 1000000",
@@ -1313,7 +1429,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "",
       "fieldConfig": {
@@ -1358,7 +1474,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1373,7 +1490,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 59
+        "y": 60
       },
       "id": 12,
       "options": {
@@ -1392,7 +1509,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "sum by (ecs_task, version) (\r\n  jvm_memory_used_bytes{\r\n    service_name=~\"$service_name\",\r\n    env=~\"$env\",\r\n    area=\"heap\"\r\n  }\r\n) / 1000000",
@@ -1408,7 +1525,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "",
       "fieldConfig": {
@@ -1453,7 +1570,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1468,7 +1586,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 59
+        "y": 60
       },
       "id": 15,
       "options": {
@@ -1487,7 +1605,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "sum by (ecs_task, version) (\r\n  jvm_memory_used_bytes{\r\n    service_name=~\"$service_name\",\r\n    env=~\"$env\",\r\n    area=\"nonheap\"\r\n  }\r\n) / 1000000",
@@ -1506,7 +1624,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 67
+        "y": 68
       },
       "id": 18,
       "panels": [],
@@ -1516,7 +1634,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "% of seconds spent in GC per second. Important: If this spikes, latency impacted",
       "fieldConfig": {
@@ -1561,7 +1679,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1576,7 +1695,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 68
+        "y": 69
       },
       "id": 16,
       "options": {
@@ -1595,7 +1714,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "100 *\r\nsum by (ecs_task, version) (\r\n  rate(jvm_gc_pause_seconds_sum{\r\n    service_name=~\"$service_name\",\r\n    env=~\"$env\"\r\n  }[5m])\r\n)\r\n",
@@ -1611,7 +1730,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "",
       "fieldConfig": {
@@ -1656,7 +1775,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1671,7 +1791,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 68
+        "y": 69
       },
       "id": 19,
       "options": {
@@ -1690,7 +1810,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "60 *\r\nsum by (ecs_task, version) (\r\n  rate(jvm_gc_pause_seconds_count{\r\n    service_name=~\"$service_name\",\r\n    env=~\"$env\"\r\n  }[5m])\r\n)\r\n",
@@ -1706,7 +1826,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+        "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
       },
       "description": "",
       "fieldConfig": {
@@ -1751,7 +1871,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1766,7 +1887,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 76
+        "y": 77
       },
       "id": 20,
       "options": {
@@ -1785,7 +1906,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+            "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
           },
           "editorMode": "code",
           "expr": "100 * \r\nsum by (ecs_task, version) (\r\n  rate(jvm_gc_pause_seconds_sum{service_name=~\"$service_name\", env=~\"$env\"}[5m])\r\n)\r\n/\r\nsum by (ecs_task, version) (\r\n  rate(jvm_gc_pause_seconds_count{service_name=~\"$service_name\", env=~\"$env\"}[5m])\r\n)\r\n",
@@ -1808,7 +1929,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+          "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
         },
         "definition": "label_values(service_name)",
         "description": "Name of the service",
@@ -1833,7 +1954,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_AMAZON_MANAGED PROMETHEUS (WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41)}"
+          "uid": "${DS_PROMETHEUS_WS-8B1AC0FD-C7A6-47AD-A406-76563C909F41}"
         },
         "definition": "label_values(env)",
         "description": "environment",
@@ -1857,13 +1978,13 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Golden Signals",
   "uid": "bfa6glokfmkg0f",
-  "version": 61,
+  "version": 3,
   "weekStart": ""
 }
